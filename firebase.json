@@ -1,17 +1,6 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*"
-    ]
-  },
-  "emulators": {
-    "hosting": {
-      "port": 5000
-    },
-    "ui": {
-      "enabled": true
-    }
+    "ignore": ["firebase.json", "**/.*"]
   }
 }

@@ -21,15 +21,7 @@
   background: #ddd;
 }
 
-html {
-  overflow: hidden;
-  height: 100%;
-}
-
 body {
-  height: 100%;
-  overflow: auto;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,7 +39,7 @@ main {
 /* ========== HERO ========== */
 
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
 }
@@ -146,7 +138,6 @@ main {
   }
 
   html {
-    height: 100vh;
     padding: 30px;
   }
 
@@ -155,6 +146,17 @@ main {
   }
 
   .hero__box {
+    flex-direction: column;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: none;
+    top: 0;
+    right: 10px;
+  }
+
+  .contact {
     flex-direction: column;
   }
 }
