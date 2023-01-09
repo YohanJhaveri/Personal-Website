@@ -1,0 +1,160 @@
+:root {
+  --color-primary: #48acf0;
+  --color-secondary: #444452;
+  --font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans,
+    Helvetica Neue, sans-serif;
+  --headshot-image-size: 250px;
+  --headshot-image-background-offset: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans,
+    Helvetica Neue, sans-serif;
+  letter-spacing: 0.25px;
+}
+
+::selection {
+  /* background: #ffdc00; */
+  background: #ddd;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========== HERO ========== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero__box {
+  position: relative;
+  display: flex;
+  gap: 50px;
+}
+
+.hero__box__headshot {
+  width: var(--headshot-image-size);
+  height: var(--headshot-image-size);
+  position: relative;
+}
+
+.hero__box__headshot__background {
+  background: var(--color-primary);
+  position: absolute;
+  width: var(--headshot-image-size);
+  height: var(--headshot-image-size);
+  border-radius: 10px;
+  top: var(--headshot-image-background-offset);
+  left: var(--headshot-image-background-offset);
+}
+
+.hero__box__headshot__image {
+  width: var(--headshot-image-size);
+  height: var(--headshot-image-size);
+  position: relative;
+  border-radius: 10px;
+}
+
+.hero__box__introduction {
+  max-width: 420px;
+  font-size: 20px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.hero__box__introduction__hello,
+.hero__box__introduction__about {
+  color: var(--color-secondary);
+}
+
+.hero__box__introduction__hello a,
+.hero__box__introduction__about a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.hero__box__introduction__resume a {
+  color: white;
+  background: var(--color-primary);
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.25px;
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  text-decoration: none;
+}
+
+.hero__box__introduction__resume a i {
+  color: white;
+}
+
+/* ========== FOOTER ========== */
+
+.footer {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.contact {
+  display: flex;
+  grid-gap: 20px;
+}
+
+.contact__icon {
+  color: var(--color-primary);
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+  :root {
+    --headshot-image-size: 150px;
+    --headshot-image-background-offset: 6px;
+  }
+
+  html {
+    height: 100vh;
+    padding: 30px;
+  }
+
+  .hero {
+    align-items: flex-start;
+  }
+
+  .hero__box {
+    flex-direction: column;
+  }
+}
