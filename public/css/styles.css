@@ -95,7 +95,7 @@ main {
 }
 
 .hero__box__introduction__resume a {
-  color: white;
+  color: var(--color-secondary);
   background: var(--color-primary);
   border-radius: 5px;
   padding: 8px 16px;
@@ -110,7 +110,7 @@ main {
 }
 
 .hero__box__introduction__resume a i {
-  color: white;
+  color: var(--color-secondary);
 }
 
 /* ========== FOOTER ========== */
@@ -158,5 +158,20 @@ main {
 
   .contact {
     flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-secondary: #eee;
+  }
+
+  ::selection {
+    /* color: #36363c; */
+    background: #444;
+  }
+
+  html {
+    background: #171c28;
   }
 }
