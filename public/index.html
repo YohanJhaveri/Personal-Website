@@ -10,50 +10,57 @@
     exceptional applications"
     />
     <meta property="og:image" content="./static/images/headshot.jpeg" />
-    <link rel="icon" type="image/x-icon" href="./static/images/favicon.png" />
-    <link rel="stylesheet" href="./css/styles.css" />
     <script src="https://kit.fontawesome.com/64eacac145.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="./static/images/favicon.png" />
     <title>Yohan Jhaveri</title>
   </head>
-  <body>
-    <main>
-      <section class="hero">
-        <div class="hero__box">
-          <div class="hero__box__headshot">
-            <div class="hero__box__headshot__background"></div>
-            <img class="hero__box__headshot__image" src="./static/images/headshot.jpeg" alt="Headshot" />
+  <body class="relative flex flex-col justify-between w-full p-7 md:p-0 dark:bg-gray-800">
+    <main class="flex flex-col items-center max-w-3xl m-auto">
+      <section class="hero flex items-start md:items-center">
+        <div class="relative flex gap-12 flex-col md:flex-row">
+          <div class="relative w-40 h-40 md:w-60 md:h-60">
+            <div class="absolute w-40 h-40 md:w-60 md:h-60 rounded-xl bg-blue-400 dark:bg-blue-300 top-1.5 left-1.5	md:top-2 md:left-2"></div>
+            <img class="relative w-40 h-40 md:w-60 md:h-60 rounded-xl" src="./static/images/headshot.jpeg" alt="Headshot" />
           </div>
-          <div class="hero__box__introduction">
-            <div class="hero__box__introduction__hello">Hello! 👋</div>
-            <div class="hero__box__introduction__about">
+          <div class="flex flex-col text-xl max-w-md items-start gap-8">
+            <div class="text-gray-600 dark:text-gray-100">Hello! 👋</div>
+            <div class="text-gray-600 dark:text-gray-100">
               I'm <strong>Yohan Jhaveri</strong>, a senior software engineer at
-              <a href="https://apexon.com" target="_blank">Apexon</a> focused on designing and building
+              <a href="https://apexon.com" target="_blank" class="text-blue-400 dark:text-blue-300 font-semibold underline">Apexon</a> focused on designing and building
               exceptional applications 👨🏻‍💻
             </div>
-            <div class="hero__box__introduction__about">
-              I graduated from <a href="https://emory.edu" target="_blank">Emory University</a> in 2021 with
+            <div class="text-gray-600 dark:text-gray-100">
+              I graduated from <a href="https://emory.edu" target="_blank" class="text-blue-400 dark:text-blue-300 font-semibold underline">Emory University</a> in 2021 with
               an undergraduate degree in <strong>Computer Science</strong> and <strong>Economics</strong> 🎓
             </div>
-            <div class="hero__box__introduction__resume">
-              <a href="./static/documents/resume.pdf" target="_blank">
-                View Resume <i class="fa-solid fa-arrow-right"></i>
+            <div class="flex flex-wrap gap-2">
+              <a class="flex items-center text-white dark:text-gray-800 rounded-md py-2 px-4 text-base font-semibold cursor-pointer tracking-wide gap-2 bg-purple-400 dark:bg-purple-300" href="./static/documents/resume.pdf" target="_blank">
+                <i class="fa-solid fa-file-pdf"></i> Resume
+              </a>
+              <a class="flex items-center text-white dark:text-gray-800 rounded-md py-2 px-4 text-base font-semibold cursor-pointer tracking-wide gap-2 bg-yellow-400 dark:bg-yellow-300" href="https://www.github.com/yohanjhaveri" target="_blank">
+                <i class="fa-solid fa-cube"></i> Projects
+              </a>
+              <a class="flex items-center text-white dark:text-gray-800 rounded-md py-2 px-4 text-base font-semibold cursor-pointer tracking-wide gap-2 bg-teal-400 dark:bg-teal-300" href="https://www.instagram.com/halcyon3301" target="_blank">
+                <i class="fa-solid fa-camera-retro"></i> Photography
               </a>
             </div>
           </div>
         </div>
       </section>
-      <footer class="footer">
-        <div class="contact">
-          <a class="contact__icon" href="https://www.github.com/yohanjhaveri" target="_blank">
+      <footer class="absolute md:fixed right-7 top-7 md:top-auto md:bottom-7">
+        <div class="flex flex-col md:flex-row gap-5">
+          <a class="text-xl text-blue-400 dark:text-blue-300" href="https://www.github.com/yohanjhaveri" target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a class="contact__icon" href="https://www.instagram.com/yohanjhaveri" target="_blank">
+          <a class="text-xl text-blue-400 dark:text-blue-300" href="https://www.instagram.com/halcyon3301" target="_blank">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a class="contact__icon" href="https://www.linkedin.com/in/yohanjhaveri/" target="_blank">
+          <a class="text-xl text-blue-400 dark:text-blue-300" href="https://www.linkedin.com/in/yohanjhaveri/" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a class="contact__icon" href="mailto:yohanjhaveri@gmail.com" target="_blank">
+          <a class="text-xl text-blue-400 dark:text-blue-300" href="mailto:yohanjhaveri@gmail.com" target="_blank">
             <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
